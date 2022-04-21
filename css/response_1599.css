@@ -1,0 +1,553 @@
+@media print,
+(max-width: 1599px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 320px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .time .icon
+    {
+        margin: 0;
+
+        transition: .2s linear;
+    }
+
+    header .time > div
+    {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 8px);
+        left: 50%;
+
+        display: none;
+
+        padding: 9px;
+
+        white-space: nowrap;
+
+        border: 1px solid #d2c6b0;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 12px 12px 6px rgba(92, 80, 64, .15);
+    }
+
+
+    header .time:hover .icon
+    {
+        color: #d2c6b0;
+    }
+
+    header .time:hover > div
+    {
+        display: block;
+    }
+
+
+
+    header .email .icon
+    {
+        margin: 0;
+
+        transition: .2s linear;
+    }
+
+    header .email > div
+    {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% - 5px);
+        left: 50%;
+
+        display: none;
+
+        padding: 9px;
+
+        white-space: nowrap;
+
+        border: 1px solid #d2c6b0;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 12px 12px 6px rgba(92, 80, 64, .15);
+    }
+
+
+    header .email:hover .icon
+    {
+        color: #d2c6b0;
+    }
+
+    header .email:hover > div
+    {
+        display: block;
+    }
+
+
+
+    header .location .icon
+    {
+        margin: 0;
+
+        transition: .2s linear;
+    }
+
+    header .location > div
+    {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% - 4px);
+        left: 50%;
+
+        display: none;
+
+        padding: 9px;
+
+        white-space: nowrap;
+
+        border: 1px solid #d2c6b0;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 12px 12px 6px rgba(92, 80, 64, .15);
+    }
+
+
+    header .location:hover .icon
+    {
+        color: #d2c6b0;
+    }
+
+    header .location:hover > div
+    {
+        display: block;
+    }
+
+
+
+    header .menu_item + .menu_item
+    {
+        margin-left: 28px;
+    }
+
+
+
+    header .download_link
+    {
+        position: absolute;
+        top: 10px;
+        left: 260px;
+    }
+
+
+
+    header .categories .hide_line
+    {
+        display: block;
+    }
+
+    header .categories > div > a br
+    {
+        display: none;
+    }
+
+
+    header .categories .sub
+    {
+        left: 0;
+
+        margin-left: 0;
+    }
+
+    header .categories > div:hover > .sub,
+    header .categories > div > a.touch_link + .sub.show
+    {
+        top: calc(100% + 1px);
+    }
+
+
+    header .categories > div:nth-child(5n+4) .sub
+    {
+        right: 0;
+        left: auto;
+    }
+
+    header .categories > div:nth-child(5n+4) .sub.level2
+    {
+        right: calc(100% + 30px);
+        left: auto;
+
+        border-radius: 15px 0 0 15px;
+        box-shadow: -12px 12px 6px rgb(92 80 64 / 15%);
+    }
+
+    header .categories > div:nth-child(5n+4) .sub > div:hover > .sub,
+    header .categories > div:nth-child(5n+4) .sub > div > a.touch_link + .sub.show
+    {
+        right: 100%;
+        left: auto;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .margin
+    {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+
+    .text_block .gallery figcaption
+    {
+        padding: 0;
+    }
+
+    .text_block .gallery figcaption br
+    {
+        display: none;
+    }
+
+
+    .text_block hr
+    {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .cont
+    {
+        min-height: 600px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 53px;
+        font-weight: 700;
+        line-height: calc(100% + 6px);
+    }
+
+
+    .main_slider .controls
+    {
+        right: 0;
+
+        margin-right: 0;
+        padding: 24px 16px 24px 24px;
+
+        border-radius: 15px 0 0 0;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .item
+    {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .item
+    {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+
+
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .swiper-slide
+    {
+        width: 340px;
+    }
+
+
+
+    /*--------------
+        Comments
+    --------------*/
+    .comments .list > * + *
+    {
+        margin-top: 32px;
+    }
+
+
+    .comments .comment_wrap
+    {
+        padding: 27px;
+    }
+
+
+    .comments .comment .btns
+    {
+        margin-left: -40px;
+    }
+
+    .comments .comment .btns > *
+    {
+        margin-left: 40px;
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info:not(.block)
+    {
+        margin-bottom: 50px;
+    }
+
+
+    .cart_info table td.amount
+    {
+        width: 188px;
+        min-width: 188px;
+    }
+
+
+    .cart_info table td.color
+    {
+        width: 96px;
+        min-width: 96px;
+    }
+
+
+    .cart_info table td.price
+    {
+        font-size: 23px;
+
+        width: 152px;
+        min-width: 152px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+
+    .cart_info table td.price.total
+    {
+        font-size: 44px;
+
+        width: 252px;
+        min-width: 252px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .form .title
+    {
+        font-size: 28px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .checkout_info .total_price
+    {
+        font-size: 28px;
+    }
+
+
+    .checkout_info .total_price .price span
+    {
+        font-size: 44px;
+        line-height: 54px;
+
+        width: 240px;
+        height: 47px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .item .name
+    {
+        font-size: 28px;
+    }
+
+
+    .contacts_info .additional_office
+    {
+        margin-top: 40px;
+    }
+
+    .contacts_info .additional_office .val
+    {
+        margin-top: 12px;
+    }
+
+
+    .contacts_info #map
+    {
+        height: 600px;
+        margin-top: 40px;
+    }
+
+
+
+    /*-------------------
+        Consult block
+    -------------------*/
+    .consult_block .form .title
+    {
+        font-size: 28px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .anchors .items > *
+    {
+        font-size: 28px;
+    }
+
+
+
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .category + .category
+    {
+        margin-top: 28px;
+    }
+
+
+    .catalog .main
+    {
+        font-size: 36px;
+        line-height: 42px;
+
+        min-height: 108px;
+        padding: 20px 44px;
+    }
+
+
+    .catalog .sub .link
+    {
+        font-size: 28px;
+
+        height: 332px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        width: calc(100% - 600px);
+        padding-left: 152px;
+    }
+
+
+    .product_info .info .name
+    {
+        font-size: 28px;
+
+        width: 172px;
+    }
+
+
+    .product_info .price
+    {
+        font-size: 28px;
+    }
+
+    .product_info .price span
+    {
+        font-size: 44px;
+
+        margin: 0 10px;
+    }
+
+
+    .product_info .info .val
+    {
+        width: calc(100% - 196px);
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .info .col_center
+    {
+        width: calc(100% - 536px);
+    }
+
+
+    footer .links
+    {
+        margin-left: -20px;
+    }
+
+    footer .links .col
+    {
+        width: calc(25% - 20px);
+        margin-left: 20px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+}

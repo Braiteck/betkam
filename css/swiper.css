@@ -1,0 +1,199 @@
+.swiper-backface-hidden .swiper-slide
+{
+    transform: none;
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev
+{
+    color: #fff;
+
+    position: relative;
+    top: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 34px;
+    margin: 0;
+
+    transform: none;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after
+{
+    display: none;
+}
+
+
+.swiper-button-next .icon,
+.swiper-button-prev .icon
+{
+    display: block;
+
+    width: 14px;
+    height: 34px;
+}
+
+.swiper-button-next .icon
+{
+    transform: rotate(180deg);
+}
+
+
+
+.carousel .swiper-button-next,
+.carousel .swiper-button-prev
+{
+    color: #4e4438;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 22px;
+    height: 53px;
+    margin: auto;
+}
+
+.carousel .swiper-button-prev
+{
+    left: -34px;
+}
+
+.carousel .swiper-button-next
+{
+    right: -34px;
+}
+
+.carousel .swiper-button-next .icon,
+.carousel .swiper-button-prev .icon
+{
+    width: 22px;
+    height: 53px;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite
+{
+    width: 300px;
+    max-width: 100%;
+    height: 5px;
+}
+
+
+.swiper-pagination-progressbar
+{
+    position: relative;
+
+    border-radius: 2px;
+    background: #fff;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+{
+    border-radius: 2px;
+    background: #2b9756;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 3px;
+    padding: 0 20px;
+
+    pointer-events: none;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.swiper-pagination-bullet
+{
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    transition: background .2s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+    border-radius: 0;
+    background: #d2c6b0;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet
+{
+    margin-left: 2px !important;
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet.active
+{
+    background: #2b9756;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+.swiper-horizontal > .swiper-scrollbar
+{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: auto;
+    left: 0 !important;
+
+    width: calc(100% - 20px) !important;
+    height: 10px;
+    margin-top: 30px;
+
+    cursor: pointer;
+
+    border-radius: 2px;
+    background: #d2c6b0;
+}
+
+.swiper-scrollbar-drag
+{
+    border-radius: 2px;
+    background: #2b9756;
+}
+
+
+.carousel.swiper-horizontal > .swiper-scrollbar,
+.images .swiper-horizontal > .swiper-scrollbar
+{
+    position: relative;
+    left: 0 !important;
+
+    display: none;
+
+    width: 100% !important;
+    height: 5px;
+    margin-top: 20px;
+}
