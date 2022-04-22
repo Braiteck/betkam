@@ -214,10 +214,10 @@
         padding: 20px 12px 20px 24px;
     }
 
-    .swiper-horizontal > .swiper-pagination-progressbar,
-    .swiper-pagination-progressbar.swiper-pagination-horizontal,
-    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite
+    .main_slider .controls .swiper-horizontal > .swiper-pagination-bullets,
+    .main_slider .controls .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .main_slider .controls .swiper-pagination-custom,
+    .main_slider .controls .swiper-pagination-fraction
     {
         width: 216px;
     }
@@ -259,7 +259,7 @@
     {
         display: inline-block;
 
-        width: 280px;
+        width: 320px;
         max-width: none;
         margin: 0;
 
@@ -282,6 +282,11 @@
     .steps .item .name
     {
         display: block;
+    }
+
+    .steps .item .thumb
+    {
+        padding-bottom: 190px;
     }
 
 
@@ -311,7 +316,7 @@
     {
         display: inline-block;
 
-        width: 280px;
+        width: 320px;
         max-width: none;
         margin: 0;
 
@@ -329,6 +334,11 @@
     {
         font-size: 22px;
         line-height: 28px;
+    }
+
+    .advantages .item .thumb
+    {
+        padding-bottom: 190px;
     }
 
 
@@ -368,6 +378,12 @@
     /*--------------
         Products
     --------------*/
+    .products .swiper.carousel
+    {
+        overflow: hidden !important;
+    }
+
+
     .products .product .info
     {
         padding: 10px 19px 19px;

@@ -15,7 +15,9 @@ $(() => {
 			slidesPerView: 1,
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'progressbar',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -54,9 +56,6 @@ $(() => {
 		let options = {
 			loop: false,
 			speed: 500,
-			simulateTouch: false,
-			allowTouchMove: true,
-			noSwiping: true,
 			spaceBetween: 20,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
@@ -108,10 +107,13 @@ $(() => {
 		$(this).addClass('thumbs_s' + i)
 
 		let options = {
-			loop: true,
+			loop: false,
 			speed: 500,
 			spaceBetween: 0,
 			nested: true,
+			simulateTouch: false,
+			allowTouchMove: true,
+			noSwiping: true,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -127,6 +129,10 @@ $(() => {
 		}
 
 		productsThumnsSliders.push(new Swiper('.thumbs_s' + i, options))
+
+		$(this).find('.swiper-pagination-bullet').mouseenter(function () {
+			productsThumnsSliders[i].slideTo($(this).index())
+		})
 	})
 
 
@@ -312,6 +318,25 @@ $(() => {
 	}
 
 
+	// Моб. блок с категориями
+	if ($(window).width() < 768) {
+		$('.categories_block .block_head .title').click(function (e) {
+			e.preventDefault()
+
+			$(this).toggleClass('active')
+			$('.categories_block .data').slideToggle(300)
+		})
+	}
+
+
+	// Моб. сполер в тексте
+	$('.text_block .mob_spoler_btn').click(function (e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').prev('.mob_hide').slideToggle(300)
+	})
+
+
 	// Поиск
 	$('.search .input').keydown(function () {
 		let _self = $(this),
@@ -375,6 +400,15 @@ $(() => {
 
 		$('footer .mob_links_btn').toggleClass('active')
 	})
+
+	if ($(window).width() < 768) {
+		$('footer .links .main a').click(function (e) {
+			e.preventDefault()
+
+			$(this).toggleClass('active')
+			$(this).closest('.main').next().slideToggle(300)
+		})
+	}
 
 	$('footer .mob_menu_btn').click((e) => {
 		e.preventDefault()
@@ -612,14 +646,6 @@ $(() => {
 	})
 
 
-	if ($('#price_list_modal').length) {
-		Fancybox.show([{
-			src: '#price_list_modal',
-			type: 'inline'
-		}])
-	}
-
-
 	// Плавная прокрутка к якорю
 	// Работает и при прокрутке к табу
 	$('.scroll_btn').click(function (e) {
@@ -837,6 +863,18 @@ $(window).on('load', () => {
 	headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
+
+
+	// Моб. фикс. шапка
+	mobHeaderInit = true,
+		mobHeaderHeight = $('.mob_header').outerHeight()
+
+	$('.mob_header').wrap('<div class="mob_header_wrap"></div>')
+	$('.mob_header_wrap').height(mobHeaderHeight)
+
+	mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
 })
 
 
@@ -883,6 +921,22 @@ $(window).on('resize', () => {
 		}, 100)
 
 
+		// Моб. фикс. шапка
+		mobHeaderInit = false
+		$('.header_wrap').height('auto')
+
+		setTimeout(() => {
+			mobHeaderInit = true
+			mobHeaderHeight = $('.mob_header').outerHeight()
+
+			$('.mob_header_wrap').height(mobHeaderHeight)
+
+			mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+				? $('.mob_header').addClass('fixed')
+				: $('.mob_header').removeClass('fixed')
+		}, 100)
+
+
 		// Перезапись ширины окна
 		WW = $(window).width()
 	}
@@ -895,6 +949,12 @@ $(window).scroll(() => {
 	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
+
+
+	// Моб. фикс. шапка
+	typeof mobHeaderInit !== 'undefined' && mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
+		? $('.mob_header').addClass('fixed')
+		: $('.mob_header').removeClass('fixed')
 })
 
 

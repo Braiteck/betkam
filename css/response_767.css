@@ -237,7 +237,7 @@
 
     .text_block h3
     {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .text_block h4
@@ -295,6 +295,31 @@
     }
 
 
+    .text_block .mob_hide
+    {
+        display: none;
+    }
+
+    .text_block .mob_spoler_btn
+    {
+        display: block;
+    }
+
+
+    .text_block .image
+    {
+        width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+    .text_block .image img
+    {
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+
 
     /*-----------------
         Main slider
@@ -312,9 +337,41 @@
     /*----------------------
         Categories block
     ----------------------*/
+    .categories_block
+    {
+        padding: 20px 0;
+    }
+
+
     .categories_block .row > *
     {
         width: calc(50% - 24px);
+    }
+
+
+    .categories_block .block_head
+    {
+        position: relative;
+
+        margin-bottom: 0;
+    }
+
+    .categories_block .block_head .title
+    {
+        width: 284px;
+    }
+
+    .categories_block .block_head .icon
+    {
+        display: block;
+    }
+
+
+    .categories_block .data
+    {
+        display: none;
+
+        padding-top: 20px;
     }
 
 
@@ -916,20 +973,114 @@
     {
         display: none;
 
-        margin-top: 20px;
-        padding-bottom: 31px;
+        margin-top: -1px;
     }
+
 
     footer .links .col
     {
-        width: calc(50% - 20px);
+        width: 100%;
     }
 
-    footer .links .col:nth-child(2) ~ .col
+    footer .links .col + .col,
+    footer .links .item + .item,
+    footer .links .col:nth-child(2) ~ .col,
+    footer .links .main + .main
     {
-        margin-top: 20px;
+        margin-top: -1px;
     }
 
+
+    footer .links .item
+    {
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+
+    footer .links .main
+    {
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+
+        display: block;
+
+        width: 100%;
+        padding: 9px 0;
+
+        transition: color .2s linear;
+
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    footer .links .main .icon
+    {
+        color: #fff;
+
+        display: block;
+
+        width: 16px;
+        height: 9px;
+
+        transition: transform .2s linear;
+    }
+
+
+    footer .links .main.active
+    {
+        color: #cb6f08;
+    }
+
+    footer .links .main.active .icon
+    {
+        transform: rotate(180deg);
+    }
+
+
+    footer .links .main a
+    {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .links .main a .icon
+    {
+        display: block;
+    }
+
+
+    footer .links .sub
+    {
+        display: none;
+
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+
+    footer .email,
+    footer .location,
+    footer .time
+    {
+        line-height: 22px;
+    }
+
+
+    footer .email .icon,
+    footer .location .icon,
+    footer .time .icon
+    {
+        margin-top: 2px;
+    }
 
 
     footer .copyright,

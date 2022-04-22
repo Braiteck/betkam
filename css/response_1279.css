@@ -69,6 +69,7 @@
     /*-----------------
         Mob. header
     -----------------*/
+    .mob_header_wrap,
     .mob_header
     {
         display: block;
@@ -203,10 +204,10 @@
     }
 
 
-    .swiper-horizontal > .swiper-pagination-progressbar,
-    .swiper-pagination-progressbar.swiper-pagination-horizontal,
-    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite
+    .main_slider .controls .swiper-horizontal > .swiper-pagination-bullets,
+    .main_slider .controls .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .main_slider .controls .swiper-pagination-custom,
+    .main_slider .controls .swiper-pagination-fraction
     {
         width: 160px;
     }
