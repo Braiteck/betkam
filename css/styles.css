@@ -2193,16 +2193,37 @@ aside .mob_filter_btn
     color: #fff;
     font-size: 16px;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 24px;
 
     display: none;
 
     width: 100%;
+    padding: 10px;
 
     text-transform: uppercase;
 
     border-radius: 15px;
     background: #2b9756;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+aside .mob_filter_btn .icon
+{
+    display: block;
+
+    width: 18px;
+    height: 10px;
+
+    transition: transform .2s linear;
+}
+
+aside .mob_filter_btn.active .icon
+{
+    transform: rotate(180deg);
 }
 
 
@@ -2531,13 +2552,22 @@ aside .mob_filter_btn
 }
 
 
-.breadcrumbs .sep
+.breadcrumbs .sep,
+.breadcrumbs .points
 {
+    color: #7e7e7e;
+
     display: inline-block;
 
     margin: 0 6px;
 
     vertical-align: top;
+}
+
+.breadcrumbs .points,
+.breadcrumbs .points + .sep
+{
+    display: none;
 }
 
 
@@ -3293,6 +3323,12 @@ aside .mob_filter_btn
     align-content: center;
 }
 
+.text_block .cols.alignend
+{
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
 .text_block .cols .col
 {
     width: calc(50% - 10px);
@@ -3689,24 +3725,6 @@ aside .mob_filter_btn
 
 
 
-.text_block.small,
-.text_block.small a.phone
-{
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.text_block.small > *,
-.text_block.small .cols .col > *,
-.text_block.small .mini_w > *,
-.text_block.small .margin > *,
-.text_block.small .with_title .title + div > *
-{
-    margin-bottom: 20px;
-}
-
-
-
 .text_block.middle,
 .text_block.middle a.phone
 {
@@ -4039,6 +4057,8 @@ aside .mob_filter_btn
 {
     position: relative;
 
+    transition: box-shadow .2s linear;
+
     border: 1px solid #7e7e7e;
     border-radius: 15px;
     background: #fff;
@@ -4047,6 +4067,8 @@ aside .mob_filter_btn
 .products .product:hover
 {
     z-index: 9;
+
+    box-shadow: 12px 12px 6px rgba(92, 80, 64, .15);
 }
 
 
@@ -4683,23 +4705,6 @@ aside .mob_filter_btn
 /*-----------
     Steps
 -----------*/
-.steps .row
-{
-    margin-bottom: -32px;
-    margin-left: -20px;
-
-    align-items: stretch;
-    align-content: stretch;
-}
-
-.steps .row > *
-{
-    width: calc(25% - 20px);
-    margin-bottom: 32px;
-    margin-left: 20px;
-}
-
-
 .steps .item
 {
     font-size: 30px;
@@ -5037,23 +5042,6 @@ aside .mob_filter_btn
 /*----------------
     Advantages
 ----------------*/
-.advantages .row
-{
-    margin-bottom: -32px;
-    margin-left: -20px;
-
-    align-items: stretch;
-    align-content: stretch;
-}
-
-.advantages .row > *
-{
-    width: calc(25% - 20px);
-    margin-bottom: 32px;
-    margin-left: 20px;
-}
-
-
 .advantages .item
 {
     font-size: 30px;
@@ -5481,9 +5469,11 @@ aside .mob_filter_btn
     height: 100%;
 
     content: '';
+    transition: opacity .2s linear;
 
     background: linear-gradient(90deg, #000 -19.47%, #1d1812 -19.46%, rgba(29, 24, 18, 0) 143.42%);
 }
+
 
 .catalog .sub .link .thumb
 {
@@ -5500,9 +5490,15 @@ aside .mob_filter_btn
     object-fit: cover;
 }
 
+
 .catalog .sub .link:hover
 {
     color: #d2c6b0;
+}
+
+.catalog .sub .link:hover:before
+{
+    opacity: 0;
 }
 
 
@@ -5569,6 +5565,7 @@ aside .mob_filter_btn
 .consult_block .form .title
 {
     font-size: 30px;
+    font-weight: 700;
     line-height: calc(100% + 6px);
 
     margin-bottom: 20px;
@@ -5843,6 +5840,59 @@ aside .mob_filter_btn
 }
 
 
+.faq .mob_tab_btn
+{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+
+    position: relative;
+
+    display: none;
+
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 9px 41px 9px 14px;
+
+    transition: .2s linear;
+    text-align: left;
+    text-transform: uppercase;
+
+    border: 1px solid #cb6f08;
+    border-radius: 10px;
+}
+
+.faq .mob_tab_btn .icon
+{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    bottom: 0;
+
+    display: block;
+
+    width: 14px;
+    height: 10px;
+    margin: auto;
+
+    transition: transform .2s linear;
+}
+
+
+.faq .mob_tab_btn.active
+{
+    color: #fff;
+
+    border-color: #2b9756;
+    background: #2b9756;
+}
+
+.faq .mob_tab_btn.active .icon
+{
+    transform: rotate(180deg);
+}
+
+
 .faq .add_question_btn
 {
     color: #2b9756;
@@ -6042,6 +6092,17 @@ aside .mob_filter_btn
 {
     margin-bottom: 10px;
     margin-left: 51px;
+}
+
+.comments .comment .btns .btn > * + *,
+.comments .comment .btns .btn.active > *
+{
+    display: none;
+}
+
+.comments .comment .btns .btn.active > * + *
+{
+    display: block;
 }
 
 .comments .comment .btns .btn span
@@ -6660,8 +6721,14 @@ aside .mob_filter_btn
 
     display: inline-block;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
+}
+
+.cart_info table td.info .name a:hover
+{
+    color: #cb6f08;
 }
 
 
@@ -7417,7 +7484,7 @@ aside .mob_filter_btn
     line-height: 24px;
 
     margin-top: auto;
-    padding: 29px 0;
+    padding: 29px 20px 29px 0;
 
     text-transform: uppercase;
 
@@ -7450,7 +7517,7 @@ aside .mob_filter_btn
 
     display: flex;
 
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
 
     justify-content: flex-start;
     align-items: center;
@@ -7477,7 +7544,7 @@ aside .mob_filter_btn
 
     display: flex;
 
-    padding: 29px 0;
+    padding: 29px 20px 29px 0;
 
     text-transform: uppercase;
 

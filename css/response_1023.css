@@ -237,53 +237,6 @@
     /*-----------
         Steps
     -----------*/
-    .steps .row
-    {
-        display: block;
-        overflow: auto;
-
-        margin: 0;
-        padding: 0 0 20px;
-
-        white-space: nowrap;
-    }
-
-    .steps .row::-webkit-scrollbar
-    {
-        width: 5px !important;
-        height: 5px !important;
-    }
-
-
-    .steps .row > *
-    {
-        display: inline-block;
-
-        width: 320px;
-        max-width: none;
-        margin: 0;
-
-        vertical-align: top;
-        white-space: normal;
-    }
-
-    .steps .row > * + *
-    {
-        margin-left: 20px;
-    }
-
-
-    .steps .item
-    {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
-    .steps .item .name
-    {
-        display: block;
-    }
-
     .steps .item .thumb
     {
         padding-bottom: 190px;
@@ -294,48 +247,6 @@
     /*----------------
         Advantages
     ----------------*/
-    .advantages .row
-    {
-        display: block;
-        overflow: auto;
-
-        margin: 0;
-        padding: 0 0 20px;
-
-        white-space: nowrap;
-    }
-
-    .advantages .row::-webkit-scrollbar
-    {
-        width: 5px !important;
-        height: 5px !important;
-    }
-
-
-    .advantages .row > *
-    {
-        display: inline-block;
-
-        width: 320px;
-        max-width: none;
-        margin: 0;
-
-        vertical-align: top;
-        white-space: normal;
-    }
-
-    .advantages .row > * + *
-    {
-        margin-left: 20px;
-    }
-
-
-    .advantages .item
-    {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
     .advantages .item .thumb
     {
         padding-bottom: 190px;
@@ -723,18 +634,24 @@
     /*-------------------
         Checkout info
     -------------------*/
-
     .checkout_info .total_price
     {
-        font-size: 22px;
+        font-size: 24px;
 
         width: 100%;
     }
 
+    .checkout_info .total_price .price
+    {
+        font-size: 30px;
+
+        margin-left: auto;
+    }
+
     .checkout_info .total_price .price span
     {
-        font-size: 32px;
-        line-height: 44px;
+        font-size: 36px;
+        line-height: 40px;
 
         height: 36px;
     }
@@ -782,19 +699,28 @@
     ---------*/
     .faq .col
     {
-        width: 100%;
-        margin-bottom: 24px;
+        display: none;
     }
 
 
-    .faq .tabs button + button
+    .faq .mob_tab_btn
     {
-        margin-top: 12px;
+        display: block;
     }
 
+
+    .faq .tab_content
+    {
+        display: none;
+
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
     .faq .tab_content.active
     {
+        display: block;
+
         width: 100%;
     }
 

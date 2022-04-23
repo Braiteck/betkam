@@ -563,7 +563,7 @@
 				</header>
 
 
-				<<section class="mob_header">
+				<section class="mob_header">
 					<div class="cont row">
 						<div class="btns">
 							<a href="/" class="cart_link btn">
@@ -624,6 +624,7 @@
 					<div class="cont">
 						<div class="breadcrumbs">
 							<a href="/">Главная</a> <span class="sep">/</span>
+							<span class="points">...</span> <span class="sep">/</span>
 							<a href="/">Статьи</a> <span class="sep">/</span>
 							<span class="current">Секреты защиты фасадного декора</span>
 						</div>
@@ -660,7 +661,7 @@
 						</div>
 
 						<div class="text_block">
-							<h2>Виды фасадного декора</h2>
+							<h2 id="anchor1">Виды фасадного декора</h2>
 
 							<div class="cols aligncenter">
 								<div class="col">
@@ -732,7 +733,7 @@
 								</div>
 							</div>
 
-							<h2>Материалы и их выбор</h2>
+							<h2 id="anchor2">Материалы и их выбор</h2>
 
 							<div class="cols aligncenter">
 								<div class="col">
@@ -809,7 +810,7 @@
 				<section class="article_info block">
 					<div class="cont">
 						<div class="text_block">
-							<h2>Как защитить фасадный декор?</h2>
+							<h2 id="anchor3">Как защитить фасадный декор?</h2>
 
 							<div class="mini_w">
 								<p>Многие задают вопрос, как защитить фасадный декор от неблагоприятных воздействий внешней среды, и это вполне оправдано. Несмотря на высокую прочность, элементы, служащие украшением наружной стороны здания, имеют определенные минусы. Например, бетонные конструкции обладают пористой структурой, из-за чего способны пропускать небольшое количество влаги. Вода, проникающая внутрь, может замерзнуть во время мороза и разрушить конструкцию. Чтобы этого не произошло, придумали гидрофобизацию. Этот процесс представляет собой обработку поверхности специальным составом, благодаря чему та становится устойчива к влаге. При этом поры остаются открытыми, что позволяет конструкции «дышать».</p>
@@ -876,8 +877,14 @@
 									</button>
 								</div>
 
-								<button class="add_question_btn">Задать свой вопрос</button>
+								<button class="add_question_btn modal_btn" data-modal="#add_question_modal">Задать свой вопрос</button>
 							</div>
+
+
+							<button class="mob_tab_btn active">
+								<span>Если у вас наличный рассчет?</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+							</button>
 
 							<div class="tab_content level1 active" id="faq_tab1">
 								<div class="text_block">
@@ -891,6 +898,12 @@
 								</div>
 							</div>
 
+
+							<button class="mob_tab_btn">
+								<span>Если у вас без наличный рассчет?</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+							</button>
+
 							<div class="tab_content level1" id="faq_tab2">
 								<div class="text_block">
 									<p>Мы успешно существуем на рынке более 20 лет. Собственное производство и опыт позволяют нам устанавливать доступные цены на всю продукцию с сохранением высокого качества. Мы производим изделия из качественного сырья — бетона.<br> Наша продукция соответствует имеющимся ГОСТам и имеет большой срок службы.</p>
@@ -902,6 +915,12 @@
 									<p>Сегодня нас знают в Москве и в других городах. К нам обращается большое число людей, многие из которых уже стали постоянными заказчиками. Каждому из них мы стараемся предложить лучшее решение.</p>
 								</div>
 							</div>
+
+
+							<button class="mob_tab_btn">
+								<span>Если у вас без наличный рассчет (плательщикам НДС)?</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+							</button>
 
 							<div class="tab_content level1" id="faq_tab3">
 								<div class="text_block">
@@ -915,6 +934,12 @@
 								</div>
 							</div>
 
+
+							<button class="mob_tab_btn">
+								<span>Какая у вас доставка?</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+							</button>
+
 							<div class="tab_content level1" id="faq_tab4">
 								<div class="text_block">
 									<p>Мы успешно существуем на рынке более 20 лет. Собственное производство и опыт позволяют нам устанавливать доступные цены на всю продукцию с сохранением высокого качества. Мы производим изделия из качественного сырья — бетона.<br> Наша продукция соответствует имеющимся ГОСТам и имеет большой срок службы.</p>
@@ -926,6 +951,12 @@
 									<p>Сегодня нас знают в Москве и в других городах. К нам обращается большое число людей, многие из которых уже стали постоянными заказчиками. Каждому из них мы стараемся предложить лучшее решение.</p>
 								</div>
 							</div>
+
+
+							<button class="mob_tab_btn">
+								<span>Почему нам доверяют?</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+							</button>
 
 							<div class="tab_content level1" id="faq_tab5">
 								<div class="text_block">
@@ -1151,6 +1182,8 @@
 							<div class="swiper-button-next">
 								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_left"></use></svg>
 							</div>
+
+							<div class="swiper-scrollbar"></div>
 						</div>
 					</div>
 				</section>
@@ -1218,7 +1251,7 @@
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
-										<div><button class="answers_btn btn"><span>Читать ответы</span> 0</button></div>
+										<div><button class="answers_btn btn"><span>Читать ответы</span> (0)</button></div>
 									</div>
 
 									<div class="likes">
@@ -1252,7 +1285,7 @@
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
-										<div><button class="answers_btn btn"><span>Читать ответы</span> 0</button></div>
+										<div><button class="answers_btn btn"><span>Читать ответы</span> (0)</button></div>
 									</div>
 
 									<div class="likes">
@@ -3408,6 +3441,49 @@
 				<a href="/" class="btn">Перейти в каталог</a>
 				<a href="/" class="btn green">Перейти на главную</a>
 			</div>
+		</section>
+
+
+		<section class="modal" id="add_question_modal">
+			<div class="modal_title">Задать свой вопрос</div>
+
+			<form action="" class="form">
+				<div class="cols row">
+					<div class="col">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Имя*">
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="Телефон*">
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="email" name="" value="" class="input" placeholder="Почта">
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="line">
+							<div class="field">
+								<textarea name="" placeholder="Вопрос*"></textarea>
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Задать вопрос</button>
+
+							<div class="agree">Мы гарантируем полную конфиденциальность предоставленной вами информации</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</section>
 
 

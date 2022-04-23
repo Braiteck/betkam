@@ -10,6 +10,12 @@
     }
 
 
+    .block
+    {
+        margin-bottom: 70px;
+    }
+
+
 
     /*--------------
         Fancybox
@@ -181,9 +187,23 @@
     }
 
 
-    .breadcrumbs .sep
+    .breadcrumbs .sep,
+    .breadcrumbs .points
     {
         margin: 0 2px;
+    }
+
+
+    .breadcrumbs .points ~ a,
+    .breadcrumbs .points ~ .sep
+    {
+        display: none;
+    }
+
+    .breadcrumbs .points,
+    .breadcrumbs .points + .sep
+    {
+        display: inline-block;
     }
 
 
@@ -263,6 +283,12 @@
     /*----------------
         Typography
     ----------------*/
+    .text_block
+    {
+        font-size: 18px;
+    }
+
+
     .text_block h2
     {
         font-size: 26px;
@@ -418,7 +444,7 @@
     --------------*/
     .products .product .info
     {
-        padding: 10px 19px 19px;
+        padding: 10px;
     }
 
 
@@ -456,7 +482,7 @@
     --------------*/
     .comments .comment_wrap
     {
-        padding: 19px;
+        padding: 10px;
     }
 
 
@@ -575,6 +601,17 @@
     .product_info .buy .btn.green
     {
         width: 100%;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .link
+    {
+        padding-right: 0;
+        padding-left: 0;
     }
 
 

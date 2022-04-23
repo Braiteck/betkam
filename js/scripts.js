@@ -238,6 +238,84 @@ $(() => {
 	})
 
 
+	// Как мы работаем
+	const stepsSliders = []
+
+	$('.steps .swiper').each(function (i) {
+		$(this).addClass('steps_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			spaceBetween: 20,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true
+			},
+			preloadImages: false,
+			lazy: true,
+			breakpoints: {
+				0: {
+					slidesPerView: 1
+				},
+				768: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				},
+				1280: {
+					slidesPerView: 4
+				}
+			}
+		}
+
+		stepsSliders.push(new Swiper('.steps_s' + i, options))
+	})
+
+
+	// Преимущества
+	const advantagesSliders = []
+
+	$('.advantages .swiper').each(function (i) {
+		$(this).addClass('advantages_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			spaceBetween: 20,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true
+			},
+			preloadImages: false,
+			lazy: true,
+			breakpoints: {
+				0: {
+					slidesPerView: 1
+				},
+				768: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				},
+				1280: {
+					slidesPerView: 4
+				}
+			}
+		}
+
+		advantagesSliders.push(new Swiper('.advantages_s' + i, options))
+	})
+
+
 	// Сравнение товаров
 	if ($('.compare_info .products > .swiper').length) {
 		new Swiper('.compare_info .products > .swiper', {
@@ -603,6 +681,22 @@ $(() => {
 	})
 
 
+	// Моб. FAQ
+	$('.faq .mob_tab_btn').click(function (e) {
+		e.preventDefault()
+
+		if ($(this).hasClass('active')) {
+			$(this).toggleClass('active').next().slideToggle(300)
+			return false
+		}
+
+		$('.faq .mob_tab_btn').removeClass('active')
+		$('.faq .tab_content').slideUp(300)
+
+		$(this).toggleClass('active').next().slideToggle(300)
+	})
+
+
 	// Fancybox
 	Fancybox.defaults.autoFocus = false
 	Fancybox.defaults.dragToClose = false
@@ -652,7 +746,7 @@ $(() => {
 		e.preventDefault()
 
 		let href = $(this).data('anchor'),
-			addOffset = 20
+			addOffset = 100
 
 		if ($(this).data('offset')) addOffset = $(this).data('offset')
 

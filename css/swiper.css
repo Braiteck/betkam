@@ -162,7 +162,9 @@
 
 
 .carousel.swiper-horizontal > .swiper-scrollbar,
-.images .swiper-horizontal > .swiper-scrollbar
+.images .swiper-horizontal > .swiper-scrollbar,
+.steps .swiper-horizontal > .swiper-scrollbar,
+.advantages .swiper-horizontal > .swiper-scrollbar
 {
     position: relative;
     left: 0 !important;

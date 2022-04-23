@@ -32,7 +32,9 @@
 
 
     .carousel.swiper-horizontal > .swiper-scrollbar,
-    .images .swiper-horizontal > .swiper-scrollbar
+    .images .swiper-horizontal > .swiper-scrollbar,
+    .steps .swiper-horizontal > .swiper-scrollbar,
+    .advantages .swiper-horizontal > .swiper-scrollbar
     {
         display: block;
     }
@@ -88,7 +90,7 @@
 
     aside .mob_filter_btn
     {
-        display: block;
+        display: flex;
     }
 
 
@@ -97,6 +99,11 @@
         display: none;
 
         margin-top: 12px;
+    }
+
+    .filter .color label:hover .tooltip
+    {
+        display: none;
     }
 
 
@@ -227,42 +234,6 @@
     /*-----------
         Steps
     -----------*/
-    .steps .row
-    {
-        display: block;
-        overflow: auto;
-
-        margin: 0;
-        padding: 0 0 20px;
-
-        white-space: nowrap;
-    }
-
-    .steps .row::-webkit-scrollbar
-    {
-        width: 5px !important;
-        height: 5px !important;
-    }
-
-
-    .steps .row > *
-    {
-        display: inline-block;
-
-        width: 280px;
-        max-width: none;
-        margin: 0;
-
-        vertical-align: top;
-        white-space: normal;
-    }
-
-    .steps .row > * + *
-    {
-        margin-left: 20px;
-    }
-
-
     .steps .item
     {
         font-size: 22px;
@@ -279,42 +250,6 @@
     /*----------------
         Advantages
     ----------------*/
-    .advantages .row
-    {
-        display: block;
-        overflow: auto;
-
-        margin: 0;
-        padding: 0 0 20px;
-
-        white-space: nowrap;
-    }
-
-    .advantages .row::-webkit-scrollbar
-    {
-        width: 5px !important;
-        height: 5px !important;
-    }
-
-
-    .advantages .row > *
-    {
-        display: inline-block;
-
-        width: 280px;
-        max-width: none;
-        margin: 0;
-
-        vertical-align: top;
-        white-space: normal;
-    }
-
-    .advantages .row > * + *
-    {
-        margin-left: 20px;
-    }
-
-
     .advantages .item
     {
         font-size: 22px;
