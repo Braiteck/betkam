@@ -24,7 +24,12 @@ $(() => {
 				prevEl: '.swiper-button-prev'
 			},
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			on: {
 				init: swiper => {
 					setTimeout(() => {
@@ -125,7 +130,12 @@ $(() => {
 			},
 			slidesPerView: 1,
 			preloadImages: false,
-			lazy: true
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			}
 		}
 
 		productsThumnsSliders.push(new Swiper('.thumbs_s' + i, options))
@@ -214,7 +224,12 @@ $(() => {
 				draggable: true
 			},
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			breakpoints: {
 				0: {
 					slidesPerView: 1
@@ -256,7 +271,12 @@ $(() => {
 				draggable: true
 			},
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			breakpoints: {
 				0: {
 					slidesPerView: 1
@@ -295,7 +315,12 @@ $(() => {
 				draggable: true
 			},
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			breakpoints: {
 				0: {
 					slidesPerView: 1
@@ -371,7 +396,12 @@ $(() => {
 				prevEl: '.thumbs-.swiper-button-prev'
 			},
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			direction: 'vertical'
 		})
 
@@ -384,7 +414,12 @@ $(() => {
 			spaceBetween: 24,
 			slidesPerView: 1,
 			preloadImages: false,
-			lazy: true,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
 			thumbs: {
 				swiper: productThumbs
 			},
