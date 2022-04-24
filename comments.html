@@ -734,7 +734,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -758,7 +761,7 @@
 								</div>
 
 
-								<div class="answer">
+								<div class="answer show">
 									<div class="title">Ответы</div>
 
 									<div class="comment">
@@ -815,7 +818,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -862,7 +868,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -904,7 +913,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -951,7 +963,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -993,7 +1008,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -1040,7 +1058,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -1082,7 +1103,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -1129,7 +1153,10 @@
 									</div>
 
 									<div class="btns">
-										<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+										<div><button class="spoler_btn btn">
+											<span>Читать весь отзыв</span>
+											<span>Скрыть отзыв</span>
+										</button></div>
 
 										<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -3245,6 +3272,49 @@
 				<a href="/" class="btn">Перейти в каталог</a>
 				<a href="/" class="btn green">Перейти на главную</a>
 			</div>
+		</section>
+
+
+		<section class="modal" id="add_reply_modal">
+			<div class="modal_title">Оставьте свой ответ на комментарий</div>
+
+			<form action="" class="form">
+				<div class="cols row">
+					<div class="col">
+						<div class="line">
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Имя*">
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="Телефон*">
+							</div>
+						</div>
+
+						<div class="line">
+							<div class="field">
+								<input type="email" name="" value="" class="input" placeholder="Почта">
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="line">
+							<div class="field">
+								<textarea name="" placeholder="Комментарий"></textarea>
+							</div>
+						</div>
+
+						<div class="submit">
+							<button type="submit" class="submit_btn">Оставить комментарий</button>
+
+							<div class="agree">Мы гарантируем полную конфиденциальность предоставленной вами информации</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</section>
 
 

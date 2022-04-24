@@ -6,7 +6,6 @@
     -------------------*/
     :root
     {
-        --font_size: 16px;
         --font_size_title: 34px;
     }
 
@@ -225,16 +224,6 @@
     /*----------------
         Typography
     ----------------*/
-    .text_block h2
-    {
-        font-size: 28px;
-    }
-
-    .text_block h2.big_margin
-    {
-        margin-bottom: 30px;
-    }
-
     .text_block h3
     {
         font-size: 24px;
@@ -482,12 +471,6 @@
     /*---------------
         Portfolio
     ---------------*/
-    .portfolio .block_head
-    {
-        margin-bottom: 28px;
-    }
-
-
     .portfolio .row
     {
         display: block;
@@ -582,21 +565,6 @@
         width: 100%;
         margin-top: 10px;
         margin-left: 0;
-    }
-
-
-    .comments .comment .text_block
-    {
-        display: -webkit-box;
-        overflow: hidden;
-
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-
-    .comments .comment .text_block.show
-    {
-        -webkit-line-clamp: 100;
     }
 
 
@@ -857,8 +825,6 @@
 
     .product_info .info .name
     {
-        font-size: 22px;
-
         width: 140px;
     }
 
@@ -875,8 +841,6 @@
 
     .product_info .price span
     {
-        font-size: 36px;
-
         margin: 0 8px;
     }
 
@@ -912,6 +876,41 @@
     .product_features .val
     {
         width: calc(100% - 200px);
+    }
+
+
+
+    /*------------------
+        Product tabs
+    ------------------*/
+    .product_tabs .mob_tabs
+    {
+        display: block;
+    }
+
+
+    .product_tabs .cont > .tabs
+    {
+        display: none;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .additional_office,
+    .contacts_info .requisites .items
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+    .contacts_info .requisites .items > *
+    {
+        padding: 15px 20px;
     }
 
 

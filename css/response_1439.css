@@ -302,12 +302,6 @@
     /*---------------
         Portfolio
     ---------------*/
-    .portfolio .block_head
-    {
-        margin-bottom: 40px;
-    }
-
-
     .portfolio .item .hover .icon
     {
         width: 60px;

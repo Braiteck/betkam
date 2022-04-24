@@ -181,17 +181,10 @@
     }
 
 
-    .text_block .margin
-    {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-
     .text_block hr.mid_margin
     {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
 
@@ -546,13 +539,6 @@
     .contacts_info .item .name
     {
         font-size: 24px;
-    }
-
-
-    .contacts_info .requisites .items
-    {
-        font-size: 16px;
-        line-height: 22px;
     }
 
 

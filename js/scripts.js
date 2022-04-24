@@ -697,6 +697,26 @@ $(() => {
 	})
 
 
+	// Комментарии
+	$('.comments .comment .spoler_btn').click(function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.comment')
+
+		$(this).toggleClass('active')
+		parent.find('.text_block').toggleClass('show')
+	})
+
+	$('.comments .comment .answers_btn').click(function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.comment_wrap')
+
+		$(this).toggleClass('active')
+		parent.find('.answer').toggleClass('show')
+	})
+
+
 	// Fancybox
 	Fancybox.defaults.autoFocus = false
 	Fancybox.defaults.dragToClose = false
@@ -783,6 +803,17 @@ $(() => {
 			$(this).addClass('active')
 			$activeTabContent.addClass('active')
 		}
+	})
+
+	$('body').on('change', '.mob_tabs select', function (e) {
+		e.preventDefault()
+
+		const $parent = $(this).closest('.tabs_container'),
+			activeTab = $(this).val(),
+			level = 'level1'
+
+		$parent.find('.tab_content.' + level).removeClass('active')
+		$(activeTab).addClass('active')
 	})
 
 	if (locationHash && $('.tabs_container').length) {

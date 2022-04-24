@@ -112,6 +112,8 @@
     .text_block h2
     {
         font-size: 30px;
+
+        margin-bottom: 40px;
     }
 
     .text_block h3
@@ -125,6 +127,13 @@
         line-height: 23px;
 
         margin-bottom: 16px;
+    }
+
+
+    .text_block * + h2,
+    .text_block * + h3
+    {
+        margin-top: 50px;
     }
 
 
@@ -321,12 +330,6 @@
     /*---------------
         Portfolio
     ---------------*/
-    .portfolio .block_head
-    {
-        margin-bottom: 30px;
-    }
-
-
     .portfolio .row > *
     {
         width: calc(33.333% - 20px);
@@ -338,7 +341,10 @@
     .portfolio .row.last2 .item:nth-last-child(2) .thumb,
     .portfolio .row.last3 .item:nth-last-child(3) .thumb,
     .portfolio .row.last4 .item:nth-last-child(4) .thumb,
-    .portfolio .row .item:last-child .thumb
+    .portfolio .row .item:last-child .thumb,
+    .portfolio .row.last1 .item:nth-last-child(2) .thumb,
+    .portfolio .row.last2 .item:nth-last-child(3) .thumb,
+    .portfolio .row.last3 .item:nth-last-child(4) .thumb
     {
         border-radius: 0;
     }
@@ -672,11 +678,12 @@
     .payment_delivery .row > *
     {
         width: 100%;
+        margin-top: 10px;
     }
 
     .payment_delivery .row > * + *
     {
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
 
@@ -684,6 +691,12 @@
     /*-------------------
         Contacts info
     -------------------*/
+    .contacts_info .item .val
+    {
+        font-size: 18px;
+    }
+
+
     .contacts_info #map
     {
         width: calc(100% + 48px);
@@ -722,6 +735,7 @@
         display: block;
 
         width: 100%;
+        padding: 10px;
     }
 
 

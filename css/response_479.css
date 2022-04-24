@@ -5,7 +5,6 @@
     -------------------*/
     :root
     {
-        --font_size: 16px;
         --font_size_title: 30px;
     }
 
@@ -172,12 +171,6 @@
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
     /*---------------
         Page head
     ---------------*/
@@ -291,12 +284,7 @@
 
     .text_block h2
     {
-        font-size: 26px;
-    }
-
-    .text_block h2.big_margin
-    {
-        margin-bottom: 28px;
+        line-height: calc(100% + 2px);
     }
 
 
@@ -313,6 +301,27 @@
     .text_block .gallery .row > *
     {
         width: calc(100% - 20px);
+    }
+
+
+    .text_block b,
+    .text_block strong
+    {
+        font-size: 16px;
+    }
+
+
+    .text_block hr.min_margin
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .text_block * + h2.min_margin,
+    .text_block * + h4
+    {
+        margin-top: 20px;
     }
 
 
@@ -434,7 +443,7 @@
     -----------------*/
     .action_block
     {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
 
@@ -445,16 +454,6 @@
     .products .product .info
     {
         padding: 10px;
-    }
-
-
-
-    /*---------------
-        Portfolio
-    ---------------*/
-    .portfolio .block_head
-    {
-        margin-bottom: 26px;
     }
 
 
@@ -562,17 +561,40 @@
     /*------------------
         Product info
     ------------------*/
+    .product_info .data
+    {
+        position: relative;
+    }
+
+
     .product_info .info .name
     {
-        font-size: 20px;
-
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
     .product_info .info .val
     {
         width: 100%;
+    }
+
+
+    .product_info .status
+    {
+        margin-top: 0;
+    }
+
+
+    .product_info .btns
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .product_info .btns .btn
+    {
+        padding: 10px 9px;
     }
 
 
@@ -583,18 +605,13 @@
         margin-left: 0;
     }
 
-
-    .product_info .price
+    .product_info .rating .stars
     {
-        font-size: 22px;
+        width: 100%;
+        margin-top: 2px;
+        margin-left: 0;
     }
 
-    .product_info .price span
-    {
-        font-size: 32px;
-
-        margin: 0 4px;
-    }
 
 
     .product_info .buy .btn,
@@ -612,6 +629,21 @@
     {
         padding-right: 0;
         padding-left: 0;
+    }
+
+
+
+    /*----------------------
+        Payment delivery
+    ----------------------*/
+    .payment_delivery .row > *
+    {
+        margin-top: 20px;
+    }
+
+    .payment_delivery .row > * + *
+    {
+        margin-top: 50px;
     }
 
 
@@ -645,6 +677,12 @@
     .modal
     {
         padding: 32px 20px;
+    }
+
+
+    .modal_title
+    {
+        padding-right: 24px;
     }
 
 

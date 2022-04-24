@@ -731,14 +731,14 @@
 						<div class="data">
 							<div class="btns">
 								<div>
-									<button class="compare_btn btn">
+									<button class="compare_btn btn modal_btn" data-modal="#compare_modal">
 										<svg class="icon"><use xlink:href="images/sprite.svg#ic_compare"></use></svg>
 										<span>Добавить в сравнения</span>
 									</button>
 								</div>
 
 								<div>
-									<button class="favorite_btn btn">
+									<button class="favorite_btn btn modal_btn" data-modal="#favorite_modal">
 										<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
 										<span>Добавить в избранное</span>
 									</button>
@@ -922,6 +922,20 @@
 							<button data-content="#product_tab5" data-level="level1">Отзывы <span>(2)</span></button>
 							<button data-content="#product_tab6" data-level="level1">Вопрос-ответ</button>
 							<button data-content="#product_tab7" data-level="level1">Дополнительные товары</button>
+						</div>
+
+						<div class="mob_tabs">
+							<select name="">
+								<option value="#product_tab1" selected>Описание</option>
+								<option value="#product_tab2">Характеристики</option>
+								<option value="#product_tab3">Оплата</option>
+								<option value="#product_tab4">Доставка</option>
+								<option value="#product_tab5" data-content="Отзывы <span>(2)</span>"></option>
+								<option value="#product_tab6">Вопрос-ответ</option>
+								<option value="#product_tab7">Дополнительные товары</option>
+							</select>
+
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
 						</div>
 
 
@@ -1146,11 +1160,18 @@
 											<div class="time">19:13</div>
 
 											<div class="text_block">
-												<p>Спасибо, очень полезная статья</p>
+												<p>Сразу после заключения договора с компанией «БетКам» мы начали плодотворное сотрудничество.Нам удалось реализовать массу проектов по обустройству территорий частных домов. Отличные идеи и большой ассортимент бетонных изделий позволили нам осуществить индивидуальные проекты наших заказчиков. Теперь мы постоянные партнеры.</p>
+
+												<p>Благодарю за сотрудничество всю команду компании «БетКам», надеюсь на дальнейшие партнерские отношения и реализацию новых идей!</p>
+
+												<p>Рекомендую всем заинтересованным лицам. С «БетКам» приятно работать — это настоящие профессионалы.</p>
 											</div>
 
 											<div class="btns">
-												<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+												<div><button class="spoler_btn btn">
+													<span>Читать весь отзыв</span>
+													<span>Скрыть отзыв</span>
+												</button></div>
 
 												<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -1180,11 +1201,18 @@
 											<div class="time">19:13</div>
 
 											<div class="text_block">
-												<p>Правда, очень полезная статья. Применяю советы в постройке своего дома</p>
+												<p>Сразу после заключения договора с компанией «БетКам» мы начали плодотворное сотрудничество.Нам удалось реализовать массу проектов по обустройству территорий частных домов. Отличные идеи и большой ассортимент бетонных изделий позволили нам осуществить индивидуальные проекты наших заказчиков. Теперь мы постоянные партнеры.</p>
+
+												<p>Благодарю за сотрудничество всю команду компании «БетКам», надеюсь на дальнейшие партнерские отношения и реализацию новых идей!</p>
+
+												<p>Рекомендую всем заинтересованным лицам. С «БетКам» приятно работать — это настоящие профессионалы.</p>
 											</div>
 
 											<div class="btns">
-												<div><button class="hide_btn btn"><span>Скрыть отзыв</span></button></div>
+												<div><button class="spoler_btn btn">
+													<span>Читать весь отзыв</span>
+													<span>Скрыть отзыв</span>
+												</button></div>
 
 												<div><button class="reply_btn btn modal_btn" data-modal="#add_reply_modal"><span>Ответить</span></button></div>
 
@@ -1249,6 +1277,12 @@
 										<button class="add_question_btn modal_btn" data-modal="#add_question_modal">Задать свой вопрос</button>
 									</div>
 
+
+									<button class="mob_tab_btn active">
+										<span>Если у вас наличный рассчет?</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+									</button>
+
 									<div class="tab_content level2 active" id="faq_tab1">
 										<div class="text_block">
 											<p>Мы успешно существуем на рынке более 20 лет. Собственное производство и опыт позволяют нам устанавливать доступные цены на всю продукцию с сохранением высокого качества. Мы производим изделия из качественного сырья — бетона.<br> Наша продукция соответствует имеющимся ГОСТам и имеет большой срок службы.</p>
@@ -1260,6 +1294,12 @@
 											<p>Сегодня нас знают в Москве и в других городах. К нам обращается большое число людей, многие из которых уже стали постоянными заказчиками. Каждому из них мы стараемся предложить лучшее решение.</p>
 										</div>
 									</div>
+
+
+									<button class="mob_tab_btn">
+										<span>Если у вас без наличный рассчет?</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+									</button>
 
 									<div class="tab_content level2" id="faq_tab2">
 										<div class="text_block">
@@ -1273,6 +1313,12 @@
 										</div>
 									</div>
 
+
+									<button class="mob_tab_btn">
+										<span>Если у вас без наличный рассчет (плательщикам НДС)?</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+									</button>
+
 									<div class="tab_content level2" id="faq_tab3">
 										<div class="text_block">
 											<p>Мы успешно существуем на рынке более 20 лет. Собственное производство и опыт позволяют нам устанавливать доступные цены на всю продукцию с сохранением высокого качества. Мы производим изделия из качественного сырья — бетона.<br> Наша продукция соответствует имеющимся ГОСТам и имеет большой срок службы.</p>
@@ -1285,6 +1331,12 @@
 										</div>
 									</div>
 
+
+									<button class="mob_tab_btn">
+										<span>Какая у вас доставка?</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+									</button>
+
 									<div class="tab_content level2" id="faq_tab4">
 										<div class="text_block">
 											<p>Мы успешно существуем на рынке более 20 лет. Собственное производство и опыт позволяют нам устанавливать доступные цены на всю продукцию с сохранением высокого качества. Мы производим изделия из качественного сырья — бетона.<br> Наша продукция соответствует имеющимся ГОСТам и имеет большой срок службы.</p>
@@ -1296,6 +1348,12 @@
 											<p>Сегодня нас знают в Москве и в других городах. К нам обращается большое число людей, многие из которых уже стали постоянными заказчиками. Каждому из них мы стараемся предложить лучшее решение.</p>
 										</div>
 									</div>
+
+
+									<button class="mob_tab_btn">
+										<span>Почему нам доверяют?</span>
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_down"></use></svg>
+									</button>
 
 									<div class="tab_content level2" id="faq_tab5">
 										<div class="text_block">
