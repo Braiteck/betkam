@@ -585,6 +585,17 @@ $(() => {
 		}])
 	})
 
+	$('body').on('submit', '.comments .form.add_comment', function (e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: '#comment_success_modal',
+			type: 'inline'
+		}])
+	})
+
 	$('body').on('submit', '#add_question_modal .form', function (e) {
 		e.preventDefault()
 
@@ -688,9 +699,11 @@ $(() => {
 	// Корзина - смена цвета
 	$('.cart_info table td.color label').click(function () {
 		let parent = $(this).closest('.color'),
-			color = $(this).data('color')
+			color = $(this).data('color'),
+			name = $(this).find('.tooltip').text()
 
 		parent.find('.btn span').css('background-color', color)
+		parent.find('.btn .name').text(name)
 	})
 
 
@@ -709,6 +722,13 @@ $(() => {
 
 		$('.checkout_info .delivery_method').hide()
 		$('.checkout_info').find(info).fadeIn(300)
+	})
+
+	$('.checkout_info .personal_data .type label').click(function () {
+		let content = $(this).data('content')
+
+		$('.checkout_info .personal_data .type_content').hide()
+		$('.checkout_info .personal_data').find(content).fadeIn(300)
 	})
 
 
@@ -1180,6 +1200,15 @@ function initMap() {
 
 		myMap.behaviors.disable('scrollZoom')
 	})
+}
+
+
+
+// Перетаскивание файла
+function dropHandler(e) {
+	console.log('File(s) dropped')
+
+	e.preventDefault()
 }
 
 

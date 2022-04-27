@@ -141,11 +141,6 @@
         margin-bottom: 30px;
     }
 
-    .text_block h2.big_margin
-    {
-        margin-bottom: 40px;
-    }
-
     .text_block h3
     {
         font-size: 28px;
@@ -604,6 +599,7 @@
     }
 
 
+    .product_info .rating,
     .product_info .info .val
     {
         width: calc(100% - 172px);

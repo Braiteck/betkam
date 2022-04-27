@@ -6022,24 +6022,7 @@ aside .mob_filter_btn.active .icon
 }
 
 
-.article_info .anchors
-{
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-
 .article_info .anchors .data
-{
-    width: calc(50% - 10px);
-}
-
-
-.article_info .anchors .data.big_w
 {
     width: 1142px;
     max-width: 100%;
@@ -7445,12 +7428,35 @@ aside .mob_filter_btn.active .icon
 
 .cart_info table td.color label
 {
+    position: relative;
+
     display: block;
 
     cursor: pointer;
     transition: box-shadow .2s linear;
 
     border-radius: 50%;
+}
+
+.cart_info table td.color label .tooltip
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 50%;
+
+    display: none;
+
+    padding: 3px 5px;
+
+    white-space: nowrap;
+    text-transform: none;
+
+    border-radius: 5px;
+    background: rgba(210, 198, 176, .8);
 }
 
 .cart_info table td.color label span
@@ -7463,9 +7469,15 @@ aside .mob_filter_btn.active .icon
     border-radius: inherit;
 }
 
+
 .cart_info table td.color label:hover
 {
     box-shadow: 0 0 0 3px #d2c6b0;
+}
+
+.cart_info table td.color label:hover .tooltip
+{
+    display: block;
 }
 
 .cart_info table td.color input:checked + label
@@ -7777,6 +7789,114 @@ aside .mob_filter_btn.active .icon
 {
     margin-top: 30px;
     margin-bottom: -20px;
+}
+
+
+.checkout_info .type
+{
+    margin-bottom: 30px;
+}
+
+.checkout_info .type .field + .field
+{
+    margin-top: 0;
+    margin-left: 70px;
+}
+
+
+.checkout_info .type_content
+{
+    display: none;
+}
+
+
+.checkout_info .requisites input
+{
+    display: none;
+}
+
+.checkout_info .requisites label
+{
+    display: flex;
+
+    cursor: pointer;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.checkout_info .requisites label .zone
+{
+    color: #4e4438;
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+
+    width: calc(100% - 160px);
+    min-height: 120px;
+    padding: 26px;
+
+    border: 1px solid #7e7e7e;
+    border-radius: 15px;
+    background: #d2c6b0;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.checkout_info .requisites label .icon
+{
+    color: #7e7e7e;
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+}
+
+.checkout_info .requisites label .exp
+{
+    color: #7e7e7e;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.checkout_info .requisites label .mob_exp
+{
+    color: #7e7e7e;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: none;
+
+    width: calc(100% - 160px);
+}
+
+.checkout_info .requisites label .btn
+{
+    color: #2b9756;
+    font-size: 16px;
+    line-height: 48px;
+
+    padding: 0 24px;
+
+    transition: .2s linear;
+    text-transform: uppercase;
+
+    border: 1px solid #2b9756;
+    border-radius: 15px;
+}
+
+.checkout_info .requisites label:hover .btn
+{
+    color: #fff;
+
+    background: #2b9756;
 }
 
 
@@ -8101,7 +8221,9 @@ aside .mob_filter_btn.active .icon
 
     padding: 10px 0;
 
-    justify-content: flex-start;
+    text-align: right;
+
+    justify-content: flex-end;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -8654,6 +8776,7 @@ aside .mob_filter_btn.active .icon
 
     display: flex;
 
+    width: calc(100% - 210px);
     margin-top: 20px;
     margin-left: auto;
 
@@ -8797,6 +8920,8 @@ aside .mob_filter_btn.active .icon
 
 .product_info .color label
 {
+    position: relative;
+
     display: block;
 
     cursor: pointer;
@@ -8815,9 +8940,34 @@ aside .mob_filter_btn.active .icon
     border-radius: inherit;
 }
 
+.product_info .color label .tooltip
+{
+    line-height: 24px;
+
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 50%;
+
+    display: none;
+
+    padding: 3px 5px;
+
+    white-space: nowrap;
+
+    border-radius: 5px;
+    background: rgba(210, 198, 176, .8);
+}
+
+
 .product_info .color label:hover
 {
     box-shadow: 0 0 0 3px #d2c6b0;
+}
+
+.product_info .color label:hover .tooltip
+{
+    display: block;
 }
 
 .product_info .color input:checked + label

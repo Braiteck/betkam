@@ -9,12 +9,6 @@
     }
 
 
-    .block
-    {
-        margin-bottom: 70px;
-    }
-
-
 
     /*--------------
         Fancybox
@@ -644,6 +638,22 @@
     .payment_delivery .row > * + *
     {
         margin-top: 50px;
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .type
+    {
+        display: block;
+    }
+
+    .checkout_info .type .field + .field
+    {
+        margin-top: 20px;
+        margin-left: 0;
     }
 
 

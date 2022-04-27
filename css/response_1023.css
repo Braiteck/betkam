@@ -515,17 +515,29 @@
 
     .cart_info table td.color .btn
     {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+
+        display: flex;
+
         width: 100%;
         padding: 10px 40px 10px 13px;
 
         border-radius: 5px;
         background: #d2c6b0;
+
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
     .cart_info table td.color .btn span
     {
         width: 30px;
         height: 30px;
+        margin-right: 13px;
 
         border-radius: 50%;
     }
@@ -640,6 +652,25 @@
     /*-------------------
         Checkout info
     -------------------*/
+    .checkout_info .requisites label .zone
+    {
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 12px;
+        padding: 19px 23px;
+    }
+
+    .checkout_info .requisites label .exp
+    {
+        display: none;
+    }
+
+    .checkout_info .requisites label .mob_exp
+    {
+        display: block;
+    }
+
+
     .checkout_info .total_price
     {
         font-size: 24px;

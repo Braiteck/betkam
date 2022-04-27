@@ -518,6 +518,7 @@
     }
 
 
+    .product_info .rating,
     .product_info .info .val
     {
         width: calc(100% - 196px);

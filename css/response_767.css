@@ -16,6 +16,12 @@
     }
 
 
+    .block
+    {
+        margin-bottom: 70px;
+    }
+
+
 
     /*--------------
         Fancybox
@@ -137,6 +143,12 @@
     /*---------------
         Page head
     ---------------*/
+    .page_head.block
+    {
+        margin-bottom: 70px;
+    }
+
+
     .page_title
     {
         font-size: 40px;
@@ -270,6 +282,11 @@
     .text_block .cols .col + .col
     {
         margin-top: 30px;
+    }
+
+    .text_block .cols .col + .col.mob_no_margin
+    {
+        margin-top: 0;
     }
 
 
@@ -645,11 +662,9 @@
     /*-------------------
         Checkout info
     -------------------*/
-    .checkout_info .form .title
+    .checkout_info .type .field + .field
     {
-        font-size: 22px;
-
-        margin-bottom: 16px;
+        margin-left: 40px;
     }
 
 
@@ -658,9 +673,26 @@
         margin-top: 24px;
     }
 
+    .checkout_info .personal_data .cols .col + .col,
     .checkout_info .delivery_method .cols .col + .col
     {
         margin-top: 0;
+    }
+
+
+    .checkout_info .requisites label .zone
+    {
+        margin-bottom: 10px;
+        padding: 15px 19px;
+
+        justify-content: center;
+    }
+
+    .checkout_info .requisites label .icon
+    {
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
     }
 
 
@@ -829,6 +861,7 @@
         width: 140px;
     }
 
+    .product_info .rating,
     .product_info .info .val
     {
         width: calc(100% - 160px);
