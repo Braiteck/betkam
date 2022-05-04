@@ -14,6 +14,8 @@
     .swiper-horizontal > .swiper-scrollbar
     {
         left: 10px !important;
+
+        display: block !important;
     }
 
 
@@ -298,12 +300,6 @@
     /*--------------
         Products
     --------------*/
-    .products .swiper.carousel
-    {
-        overflow: hidden !important;
-    }
-
-
     .products .product .info
     {
         padding: 10px 19px 19px;
@@ -335,16 +331,15 @@
         width: calc(33.333% - 20px);
     }
 
-
-    .portfolio .row .item:first-child .thumb,
-    .portfolio .row .item:nth-child(4) .thumb,
-    .portfolio .row.last2 .item:nth-last-child(2) .thumb,
-    .portfolio .row.last3 .item:nth-last-child(3) .thumb,
-    .portfolio .row.last4 .item:nth-last-child(4) .thumb,
-    .portfolio .row .item:last-child .thumb,
-    .portfolio .row.last1 .item:nth-last-child(2) .thumb,
-    .portfolio .row.last2 .item:nth-last-child(3) .thumb,
-    .portfolio .row.last3 .item:nth-last-child(4) .thumb
+    .portfolio .row > *:first-child .thumb,
+    .portfolio .row > *:nth-child(4) .thumb,
+    .portfolio .row.last2 > *:nth-last-child(2) .thumb,
+    .portfolio .row.last3 > *:nth-last-child(3) .thumb,
+    .portfolio .row.last4 > *:nth-last-child(4) .thumb,
+    .portfolio .row > *:last-child .thumb,
+    .portfolio .row.last1 > *:nth-last-child(2) .thumb,
+    .portfolio .row.last2 > *:nth-last-child(3) .thumb,
+    .portfolio .row.last3 > *:nth-last-child(4) .thumb
     {
         border-radius: 0;
     }
@@ -540,6 +535,11 @@
         margin-right: 13px;
 
         border-radius: 50%;
+    }
+
+    .cart_info table td.color .btn .name
+    {
+        display: block;
     }
 
     .cart_info table td.color .btn .icon

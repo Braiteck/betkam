@@ -168,7 +168,7 @@
     .block_head .link
     {
         width: 100%;
-        margin-top: 16px;
+        margin-top: 20px;
     }
 
 
@@ -262,8 +262,8 @@
     .text_block b.big,
     .text_block strong.big
     {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: 30px;
     }
 
 
@@ -489,58 +489,15 @@
     /*---------------
         Portfolio
     ---------------*/
-    .portfolio .row
+    .portfolio .block_head
     {
-        display: block;
-        overflow: auto;
-
-        margin-bottom: 0;
-        margin-left: 0;
-        padding-bottom: 20px;
-
-        white-space: nowrap;
-    }
-
-    .portfolio .row::-webkit-scrollbar
-    {
-        width: 5px;
-        height: 5px;
-
-        border-radius: 5px;
-    }
-
-    .portfolio .row::-webkit-scrollbar-thumb
-    {
-        border-radius: 3px;
+        margin-bottom: 40px;
     }
 
 
-    .portfolio .row > *
+    .portfolio .row > * .thumb
     {
-        display: inline-block;
-
-        width: 320px;
-        max-width: none;
-        margin: 0;
-
-        vertical-align: top;
-    }
-
-    .portfolio .row > * + *
-    {
-        margin-left: 16px;
-    }
-
-
-    .portfolio .row .item:first-child .thumb,
-    .portfolio .row .item:nth-child(4) .thumb,
-    .portfolio .row.last2 .item:nth-last-child(2) .thumb,
-    .portfolio .row.last3 .item:nth-last-child(3) .thumb,
-    .portfolio .row.last4 .item:nth-last-child(4) .thumb,
-    .portfolio .row .item:last-child .thumb,
-    .portfolio .row .item .thumb
-    {
-        border-radius: 15px;
+        border-radius: 15px !important;
     }
 
 
@@ -599,6 +556,14 @@
     .comments .comment .btns > *
     {
         margin-left: 0;
+    }
+
+
+    .comments .answer .comment .btns
+    {
+        width: auto;
+
+        order: 0;
     }
 
 
@@ -667,6 +632,11 @@
         margin-left: 40px;
     }
 
+
+    .form .cols .col.mob_last
+    {
+        order: 3;
+    }
 
     .checkout_info .form .cols .col + .col
     {
@@ -889,14 +859,6 @@
     /*----------------------
         Product features
     ----------------------*/
-    .product_features
-    {
-        width: calc(100% + 48px);
-        margin-right: -24px;
-        margin-left: -24px;
-    }
-
-
     .product_features > *
     {
         padding: 12px 24px;

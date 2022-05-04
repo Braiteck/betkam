@@ -704,6 +704,8 @@ $(() => {
 
 		parent.find('.btn span').css('background-color', color)
 		parent.find('.btn .name').text(name)
+
+		$('.mini_modal, .mini_modal_btn').removeClass('active')
 	})
 
 
@@ -713,6 +715,8 @@ $(() => {
 			text = $(this).text()
 
 		parent.find('.btn span').text(text)
+
+		$('.mini_modal, .mini_modal_btn').removeClass('active')
 	})
 
 
@@ -770,6 +774,7 @@ $(() => {
 
 	// Fancybox
 	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
 	Fancybox.defaults.dragToClose = false
 	Fancybox.defaults.l10n = {
 		CLOSE: "Закрыть",
@@ -1051,6 +1056,10 @@ $(window).on('load', () => {
 	mobHeaderInit && $(window).scrollTop() > mobHeaderHeight
 		? $('.mob_header').addClass('fixed')
 		: $('.mob_header').removeClass('fixed')
+
+
+	// Портфолио
+	initPortfolioSliders()
 })
 
 
@@ -1111,6 +1120,10 @@ $(window).on('resize', () => {
 				? $('.mob_header').addClass('fixed')
 				: $('.mob_header').removeClass('fixed')
 		}, 100)
+
+
+		// Портфолио
+		initPortfolioSliders()
 
 
 		// Перезапись ширины окна
@@ -1308,4 +1321,46 @@ function compareHeight() {
 
 
 	$('.compare_info .swiper-scrollbar').css('top', $('.compare_info .products .product').outerHeight())
+}
+
+
+// Портфолио
+portfolioSliders = []
+
+function initPortfolioSliders() {
+	if ($(window).width() < 767) {
+		if ($('.portfolio .row').length) {
+			$('.portfolio .row > *').addClass('swiper-slide')
+			$('.portfolio .row').addClass('swiper-wrapper').removeClass('row')
+
+			$('.portfolio .swiper').each(function (i) {
+				$(this).addClass('portfolio_s' + i)
+
+				let options = {
+					loop: false,
+					speed: 500,
+					spaceBetween: 20,
+					watchSlidesProgress: true,
+					slideActiveClass: 'active',
+					slideVisibleClass: 'visible',
+					scrollbar: {
+						el: '.swiper-scrollbar',
+						draggable: true
+					},
+					slidesPerView: 1
+				}
+
+				portfolioSliders.push(new Swiper('.portfolio_s' + i, options))
+			})
+		}
+	} else {
+		portfolioSliders.forEach(element => {
+			element.destroy(true, true)
+		})
+
+		portfolioSliders = []
+
+		$('.portfolio .swiper-wrapper').addClass('row').removeClass('swiper-wrapper')
+		$('.portfolio .row > *').removeClass('swiper-slide')
+	}
 }

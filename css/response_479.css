@@ -210,16 +210,6 @@
 
 
 
-    /*----------------
-        Block head
-    ----------------*/
-    .block_head
-    {
-        margin-bottom: 20px;
-    }
-
-
-
     /*------------------
         Form elements
     ------------------*/
@@ -498,12 +488,12 @@
     {
         width: 100%;
         margin-bottom: 8px;
-        padding-left: 20px;
+        padding-left: 0;
     }
 
     .comments .answer .comment
     {
-        width: calc(100% - 20px);
+        width: 100%;
     }
 
 

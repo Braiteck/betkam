@@ -5132,6 +5132,31 @@ aside .mob_filter_btn.active .icon
 /*-----------
     Steps
 -----------*/
+.steps .swiper
+{
+    overflow: visible !important;
+}
+
+.steps .swiper > .swiper-wrapper > .swiper-slide
+{
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.steps .swiper > .swiper-wrapper > .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
 .steps .item
 {
     font-size: 30px;
@@ -5469,6 +5494,31 @@ aside .mob_filter_btn.active .icon
 /*----------------
     Advantages
 ----------------*/
+.advantages .swiper
+{
+    overflow: visible !important;
+}
+
+.advantages .swiper > .swiper-wrapper > .swiper-slide
+{
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.advantages .swiper > .swiper-wrapper > .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
 .advantages .item
 {
     font-size: 30px;
@@ -5532,12 +5582,12 @@ aside .mob_filter_btn.active .icon
 
 
 
-.portfolio .swiper.carousel
+.portfolio .swiper
 {
     overflow: visible !important;
 }
 
-.portfolio .swiper.carousel > .swiper-wrapper > .swiper-slide
+.portfolio .swiper > .swiper-wrapper > .swiper-slide
 {
     visibility: hidden;
 
@@ -5547,7 +5597,7 @@ aside .mob_filter_btn.active .icon
     opacity: 0;
 }
 
-.portfolio .swiper.carousel > .swiper-wrapper > .swiper-slide.visible
+.portfolio .swiper > .swiper-wrapper > .swiper-slide.visible
 {
     visibility: visible;
 
@@ -5653,27 +5703,27 @@ aside .mob_filter_btn.active .icon
     border-radius: 0;
 }
 
-.portfolio .row .item:first-child .thumb
+.portfolio .row > *:first-child .thumb
 {
     border-top-left-radius: 15px;
 }
 
-.portfolio .row .item:nth-child(4) .thumb
+.portfolio .row > *:nth-child(4) .thumb
 {
     border-top-right-radius: 15px;
 }
 
-.portfolio .row.last2 .item:nth-last-child(2) .thumb,
-.portfolio .row.last3 .item:nth-last-child(3) .thumb,
-.portfolio .row.last4 .item:nth-last-child(4) .thumb
+.portfolio .row.last2 > *:nth-last-child(2) .thumb,
+.portfolio .row.last3 > *:nth-last-child(3) .thumb,
+.portfolio .row.last4 > *:nth-last-child(4) .thumb
 {
     border-bottom-left-radius: 15px;
 }
 
-.portfolio .row .item:last-child .thumb,
-.portfolio .row.last1 .item:nth-last-child(2) .thumb,
-.portfolio .row.last2 .item:nth-last-child(3) .thumb,
-.portfolio .row.last3 .item:nth-last-child(4) .thumb
+.portfolio .row > *:last-child .thumb,
+.portfolio .row.last1 > *:nth-last-child(2) .thumb,
+.portfolio .row.last2 > *:nth-last-child(3) .thumb,
+.portfolio .row.last3 > *:nth-last-child(4) .thumb
 {
     border-bottom-right-radius: 15px;
 }
@@ -7336,6 +7386,11 @@ aside .mob_filter_btn.active .icon
     box-shadow: 0 0 0 3px #2b9756;
 }
 
+.cart_info table td.color .btn .name
+{
+    display: none;
+}
+
 .cart_info table td.color .btn .icon
 {
     color: #cb6f08;
@@ -8232,6 +8287,7 @@ aside .mob_filter_btn.active .icon
 .compare_info .product_features > *:after
 {
     position: absolute;
+    z-index: -1;
     top: 0;
     right: 100%;
 
@@ -9774,7 +9830,7 @@ footer .phone a:hover
 footer .time
 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 18px;
 
     display: flex;
